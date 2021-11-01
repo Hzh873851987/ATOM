@@ -14,7 +14,7 @@
   > 若要将 Maya 场景作为 Alembic 文件进行导入和导出，则必须加载 AbcImport.mll 和 AbcExport.mll 插件。</br>
   打开“插件管理器”（Plug-in Manager）（“窗口 > 设置/首选项 > 插件管理器”（Windows > Settings/Preferences > Plug-in Manager）），以确保这些插件已加载到 Maya 中。
 
-# 绑定Rigging 骨骼Skeleton
+# 绑定Rigging
   * ## 绑定类似于父子关系，呈一种约束关系
   * ## IK（反向动力学）
     * IK 不是骨骼，而是控制柄，由ik和极向量来控制骨骼
