@@ -14,6 +14,16 @@
   > 若要将 Maya 场景作为 Alembic 文件进行导入和导出，则必须加载 AbcImport.mll 和 AbcExport.mll 插件。</br>
   打开“插件管理器”（Plug-in Manager）（“窗口 > 设置/首选项 > 插件管理器”（Windows > Settings/Preferences > Plug-in Manager）），以确保这些插件已加载到 Maya 中。
 
+  * ## 导出[高级选项](https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2022/CHS/Maya-Basics/files/GUID-854D22F6-7547-465C-8A13-E21A8A6D9714-htm.html)（部分）
+    * ### UV Write
+      * 启用该选项以将 UV 数据从多边形网格和细分对象写入到 Alembic 文件中。`仅包含当前的 UV 贴图。`
+    * ### Write Visibility
+      * 启用该选项以将对象的可见性状态存储在 Alembic 文件中。`否则，所有对象都视为可见。`
+    * ### World Space
+      * 启用该选项以将节点层次中的顶部节点存储为世界空间。默认情况下，这些节点存储为局部空间。
+    * ### Filter Euler Rotations
+      * 启用该选项以使用 Euler 过滤器过滤 X、Y 和 Z 旋转数据。Euler 过滤有助于解决旋转中的违规情况，`尤其是 X、Y 和 Z 旋转超过 360 度时。`
+
 # 绑定Rigging
   * ## 绑定类似于父子关系，呈一种约束关系
   * ## IK（反向动力学）
