@@ -34,3 +34,19 @@
     * FK是靠父级的旋转来控制子集的变化！但是要注意旋转的合理性!比如人的腿只能是向后弯曲而不能左右弯曲
 
   ## 可以这样理解，你试着抬起你的左脚，IK是你的脚发力，带着你的腿运动，FK是你的腿发力，带着你的脚运动
+
+  * ## `尽量不要缩放绑定后的模型，容易破坏绑定的表达式，蒙皮等等……`
+ 
+# 摄像机
+  * ## 开启FOV (Filed Of View)显示
+      > Attribute Editer
+      >> Frustum Display Controls
+      >>> Display Frustum
+
+  * ## [Gimbal Lock万向锁](https://www.zhihu.com/question/47736315/answer/236284413)</br>比如xyz旋转轴向：</br>当物体沿Y轴旋转达到90°时，会造成X轴与Z轴重合从而造成Z轴丢失自由度，即 Gimbal Lock。</br>此时如果需要
+
+  * ## 摄像机无法进行冻结变换操作，因为它不是一个Poloy。</br>可以使用打组的方式进行一个绑定。
+  > cam_rotate 负责摄像机的旋转`(注意设置需要的 Rotate Order 避免 Gimbal Lock万向锁)`</br>
+  一般摄像机只会做俯仰和偏航以及水平移动，所以旋转方向通常使用 zxy轴向
+  >> cam_move 负责摄像机的水平移动
+  >>> cam(摄像机本身) 需要的话可以加一些旋转
